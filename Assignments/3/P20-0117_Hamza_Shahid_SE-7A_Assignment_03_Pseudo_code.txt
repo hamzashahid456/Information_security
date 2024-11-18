@@ -1,0 +1,15 @@
+Initialize:
+- Choose two large prime numbers p and q, such that (p % 4 == 3) and (q % 4 == 3).
+- Compute N = p * q.
+- Choose a random seed value X0, where (X0 < N) and relatively prime to N.
+
+Generate Pseudorandom Bits:
+For each pseudorandom bit you want to generate:
+	- Compute X_{i+1} = (X_i * X_i) % N.
+	- Extract the least significant bit (LSB) of X_{i+1} as the pseudorandom bit.
+
+Repeat the above step for as many bits as needed.
+
+Output the generated pseudorandom bits.
+
+
